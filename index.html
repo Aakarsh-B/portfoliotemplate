@@ -130,6 +130,18 @@
                         </div>
                     </div>
                 </section>
+                
+                <script type="text/javascript">
+                fetch('https://ig.instant-tokens.com/users/3c33fe66-64c6-42a3-8f47-4541b49adaac/instagram/17841444033584972/token.js?userSecret=ej4ibeo7ud9qkeqq1x07w')
+                .then(resp => resp.json())
+                .then(data => {
+                    var feed = new Instafeed({
+                        accessToken: data.Token,
+                        limit: 12,
+                        template: '<a href="{{link}}"><img class="image__img  pulse1" title="{{caption}}" src="{{image}}" /><div class="image__overlay"><div class="image__title">{{caption}}</div></div></a>',
+                    });
+                    feed.run();
+                });
 
                 <section id="section-about">
                     <div class="container">
