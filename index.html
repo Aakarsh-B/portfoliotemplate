@@ -134,7 +134,7 @@
                 .then(resp => resp.json())
                 .then(data => {
                     var feed = new Instafeed({
-                        accessToken: data.Token,
+                        accessToken: data.InstagramToken,
                         limit: 12,
                         template: '<a href="{{link}}"><img class="image__img  pulse1" title="{{caption}}" src="{{image}}" /><div class="image__overlay"><div class="image__title">{{caption}}</div></div></a>',
                     });
