@@ -128,19 +128,7 @@
                     </div>
                 </section>
                 
-                <div id="instafeed"></div>
-                <script type="text/javascript">
-                fetch('https://ig.instant-tokens.com/users/3c33fe66-64c6-42a3-8f47-4541b49adaac/instagram/17841444033584972/token.js?userSecret=2lmrrsw4vtkfkag58efcut')
-                .then(resp => resp.json())
-                .then(data => {
-                    var feed = new Instafeed({
-                        accessToken: data.InstagramToken,
-                        limit: 12,
-                        template: '<a href="{{link}}"><img class="image__img  pulse1" title="{{caption}}" src="{{image}}" /><div class="image__overlay"><div class="image__title">{{caption}}</div></div></a>',
-                    });
-                    feed.run();
-                });
-                </script>
+                
                 <section id="section-about">
                     <div class="container">
                         <div class="row align-items-center">
@@ -498,6 +486,18 @@
                     </div>
                 </div>
             </section>
+                
+                <div id="instafeed"></div>
+                <script type="text/javascript">
+                fetch('https://ig.instant-tokens.com/users/3c33fe66-64c6-42a3-8f47-4541b49adaac/instagram/17841444033584972/token.js?userSecret=2lmrrsw4vtkfkag58efcut')
+                .then(resp => resp.json())
+                .then(data => {
+                    var feed = new Instafeed({
+                        accessToken: InstagramToken
+                    });
+                    feed.run();
+                });
+                </script>
 
             <!-- footer start -->
       <footer class="footer -type-1 bg-dark-1">
